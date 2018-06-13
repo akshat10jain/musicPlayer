@@ -71,17 +71,21 @@ class App extends React.Component {
         return (
             <div>
                 {console.log(playlist.url)}
-                {playlist.url !== '' && <MusicPlayer playlist={playlist} playnext = {this.props.playnext}/>}
+                {playlist.url !== '' && <MusicPlayer playlist={playlist} playnext = {this.props.playnext} autoplay={true}/>}
 
             </div>
         )
     }
 }
+
 class Playlistname extends React.Component {
     render() {
         return <li>{this.props.name}</li>
     }
 }
+
+
+
 class Playlist extends React.Component {
     render() {
         return (
@@ -94,6 +98,9 @@ class Playlist extends React.Component {
 
     }
 }
+
+
+
 
 class PlayerPage extends React.Component {
 
@@ -149,6 +156,6 @@ class PlayerPage extends React.Component {
             </div>
         );
     }
-}
+} 
 
 export default PlayerPage
